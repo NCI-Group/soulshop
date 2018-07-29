@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :inventories
   get 'site/home'
   get 'site/about'
   get 'site/contact'
