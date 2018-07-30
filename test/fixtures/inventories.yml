@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Designation: MyString
+  Description: MyText
+  Freshness: MyString
+  image_url: MyString
+  Karma_Rating: MyString
+  Cost: 1
+
+two:
+  Designation: MyString
+  Description: MyText
+  Freshness: MyString
+  image_url: MyString
+  Karma_Rating: MyString
+  Cost: 1
