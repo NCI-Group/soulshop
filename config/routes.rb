@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  
+
+  devise_for :users
   resources :inventories
   get 'site/home'
   get 'site/about'
   get 'site/contact'
   
-  
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
   
   
   
