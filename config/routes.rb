@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :profiles
   devise_for :users
   resources :inventories
   get 'site/home'
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   get '/cart' => 'cart#index'
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'
+  
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   
   
   
