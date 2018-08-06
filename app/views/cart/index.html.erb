@@ -28,7 +28,7 @@
 		<td class="quantity"><%= quantity %><br/></td>
 		<td class="price"><%= number_to_currency(quantity * inventory.Cost, :unity => "Qrts") %></td>
 	</tr>
-	<% total += quantity * inventory.price %>
+	<% total += quantity * inventory.Cost %>
 <% end %>
 
 	<tr>
