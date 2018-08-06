@@ -1,6 +1,6 @@
 class InventoriesController < ApplicationController
   before_action :set_inventory, only: [:show, :edit, :update, :destroy]
-  
+
   before_filter :authenticate_user!
   before_filter :ensure_admin, :only => [:new, :edit, :create, :update, :destroy]
 
@@ -13,6 +13,8 @@ class InventoriesController < ApplicationController
   # GET /inventories/1
   # GET /inventories/1.json
   def show
+    # @test = params[:id]
+    @random_recommendation = Inventory.order("RANDOM()").limit(4).where.not(id: params[:id]).pluck(:id, :image_url, :Designation, :Karma_Rating, :Cost)
   end
 
   # GET /inventories/new
@@ -63,7 +65,7 @@ class InventoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
 	def ensure_admin
 		unless current_user && current_user.admin?
 			render :text => "Access Error Message", :status => :unauthorized

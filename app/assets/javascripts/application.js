@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// AUTOMATIC SLIDESHOW
+function slideshow() {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    var y = document.getElementsByClassName("slide-text");
+
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+       y[i].style.display = "none";
+    }
+    slideIndex++;
+
+    if (slideIndex > x.length) {slideIndex = 1}
+    if (slideIndex < 1) {slideIndex = x.length}
+
+    x[slideIndex-1].style.display = "block";
+    y[slideIndex-1].style.display = "block";
+
+    setTimeout(slideshow, 6000); // Change image every 2 seconds
+}
