@@ -1,6 +1,51 @@
+<table class="catalog">
+
+<% @inventories.each do |inventory| %>
+  <tr>
+    <td>
+      <div class="image">
+        <%= link_to (image_tag inventory.image_url, :class => "image-style"), inventory %>
+      </div>
+    </td>
+    <td class="product-info">
+      <div class="title">
+        <%= link_to inventory.Designation, inventory, :class => "title-style"%>
+      </div>
+      <div class="description">
+        <%= inventory.Description %>
+      </div>
+      <div class="price">
+        <%= number_to_currency(inventory.Cost, :unit => "qt.")%>
+      </div>
+    </td>
+    <td class="add-cart">
+      <div class="links">
+        <% if session[:login] == 1 %>
+          <%= link_to 'Edit', edit_item_path(inventory) %>
+          <%= link_to 'Destroy', inventory, :confirm => 'Are you sure?', :method => :delete %>
+        <% else %>
+        <div class="karma">
+          Karma Rating: <%= inventory.Karma_Rating %>
+        </div>
+        </br>
+          <a href="/cart/<%= inventory.id %>" onclick="addRemoveItem()">
+            <img src="/assets/shopping-cart.png" alt="Product not added" class="cart-image">
+            <br/>
+            Add to Cart
+          </a><br/><br/>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+<% end %>
+
+</table>
+
+</br>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Inventories</h1>
+<h1>Inventories Base Layout - TO DELETE</h1>
 
 <table>
   <thead>

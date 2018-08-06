@@ -1,3 +1,224 @@
 // Place all the styles related to the inventories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// STYLE FOR PRODUCT CATALOG
+.catalog {
+  width: 80%;
+  margin: auto;
+}
+
+.catalog td {
+  border-bottom: 1px solid #dddddd;
+}
+
+.catalog .image-style {
+  width: 200px;
+}
+
+.catalog .title {
+  margin-bottom: 4px;
+}
+
+.catalog .title-style {
+  font-size: 20px;
+  color:#005ec3;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.catalog .title-style:hover {
+  color:#d56331
+}
+
+.catalog .description {
+  margin-bottom: 10px;
+}
+
+.catalog .price {
+  font-size: 16px;
+  color: #bf0000
+}
+
+.catalog .add-cart {
+  width: 20%;
+  text-align: center;
+}
+
+.catalog .karma {
+  font-size: 16px;
+  color: #ff8000;
+  margin-bottom: 15px;
+}
+
+.catalog .cart-image {
+  width: 16%;
+}
+
+// STYLE FOR INDIVIDUAL PRODUCT PAGE
+#product-container {
+  margin: 5px 150px 5px 150px;
+  padding: 0 20px 0 20px;
+  height: 100%;
+}
+
+#product-info {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0px 30px 0px;
+}
+
+#product-container #product-image {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  vertical-align: top;
+  // border: 1px solid green;
+}
+
+#product-container #product-detail {
+  display: inline-block;
+  width: 65%;
+  padding-left: 6px;
+  vertical-align: top;
+  // border: 1px solid blue;
+}
+
+#product-container #product-detail h3 {
+  font-size: 22px;
+  color:#005ec3;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.product-detail-desc, .product-detail-charac {
+  width:95%;
+  margin-bottom: 10px;
+}
+
+.product-detail-desc {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.container-left {
+  float: left;
+  width: 60%;
+  // border: 1px solid green;
+}
+
+.add-to-cart-area {
+  padding: 0px 20px 10px 20px;
+  float:right;
+  // border: 1px solid red;
+}
+
+.price-product {
+  text-align: center;
+  padding:10px;
+  font-size: 22px;
+  color: #bf0000
+}
+
+// BUTTON
+.button {
+  display: block;
+  width: 160px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #82bbd1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff9999));
+  padding: 12px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button span {
+  color: #1b1b1b;
+}
+
+.button:hover {
+  background-color: #82bbd1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff6600));
+}
+
+#latestReviews {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  text-align: center;
+}
+
+#latestReviews .reviewGroup {
+  display: inline-block;
+  width: 40%;
+  padding: 15px;
+  overflow:auto;
+}
+
+#latestReviews .review {
+  text-align: left;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 6px;
+  clear: both;
+}
+
+#latestReviews .user {
+  font-size: 14px;
+  font-weight: bold;
+  float:right;
+  margin:10px 0 20px 0;
+}
+
+#latestReviews .userProfileImg {
+  width: 6%;
+  margin: 5px 10px 15px 10px;
+  float: right;
+}
+
+#recommendations {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: calc(90%/5);
+    margin: 0 12px 0 12px;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery .image-recommendation {
+    width: 90%;
+    height: auto;
+}
+
+.info-rec {
+  font-weight: bold;
+}
+
+.info-rec-name {
+  color:#005ec3;
+}
+
+.info-rec-karma {
+  color: #ff8000;
+}
+
+.info-rec-price {
+  color: #bf0000
+}
