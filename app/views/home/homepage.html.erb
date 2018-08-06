@@ -1,77 +1,51 @@
 <!DOCTYPE html>
-
 <html>
+	<head>
+		<title>Soulshop</title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <head>
-    <title>Home Page</title>
-    <!-- Define the character set to be UTF-8 -->
-    <meta charset="UTF-8">
-    <!-- Make the web site work on all devices and screen resolutions -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index_style.css">
-    <script src="slideshow.js"></script>
-  </head>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
 
-  <body>
-  <div class="container">
-      <header>
-         <a href="#"><img id="logo" src="assets/user.png" alt="logo"></a>
-         <nav>
-           <ul>
-             <li><a href="/inventories" class="navMenu">Shop</a></li>
-             <li><a href="/about" class="navMenu">About</a></li>
-             <li><a href="/contact" class="navMenu">Contact</a></li>
-             <li><a href="/admin" class="navMenu">Login</a></li>
-             <li><a href="/logout" class="navMenu">Logout</a></li>
-             <li id="search">
-               <form id="searchForm">
-                 <input type="text" id="searchBar" name="search" placeholder="Search..">
-                 <button type="submit" id="searchButton">Go</button>
-               </form>
-             </li>
-           </ul>
-         </nav>
-      </header>
+	<body>
 
-      <article>
+		<div class="container">
 
-        <div class="slideshow-container">
-          <a href=""><img class="slides" src="/assets/business.jpg"></a>
-          <a href=""><img class="slides" src="/assets/finance.jpg"></a>
-          <a href=""><img class="slides" src="/assets/old.jpg"></a>
+			<header>
+			</header>
 
-          <div class="slide-text-container">
-            <a href="#">
-              <div class="slide-text">
-                <h3>Amazing text about a soul</h3>
-                <h4>More information and detail about that sould</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="slide-text">
-                <h3>Amazing text about a soul</h3>
-                <h4>More information and detail about that sould</h4>
-              </div>
-            </a>
-            <a>
-              <div class="slide-text">
-                <h3>Amazing text about a soul</h3>
-                <h4>More information and detail about that sould</h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      <br/>
+			<article>
 
-      </article>
-      <footer>2018 &copy; Soul Shop. All rights reserved.</footer>
-    </div>
+				<div class="slideshow-container">
+					<a href=""><img class="slides" src="assets/friend.jpg"></a>
+					<a href=""><img class="slides" src="assets/commute.jpg"></a>
+					<a href=""><img class="slides" src="assets/business.jpg"></a>
+					<a href=""><img class="slides" src="assets/monk.jpg"></a>
+					<a href=""><img class="slides" src="assets/old.jpg"></a>
+					<a href=""><img class="slides" src="assets /finance.jpg"></a>
+					<a href=""><img class="slides" src="assets/dreamer.jpg"></a>
 
-    <script>
-      var slideIndex = 0;
-      slideshow();
-    </script>
+					<div class="slide-text-container">
+						<div class="slide-text">
+							<h2>WELCOME TO SOULD SHOP</h2>
+							<h4>The World's Largest Online Marketplace for New and Second-Hand Souls</h4>
+							</br>
+							<a href="/homepage.html.erb"><h4 id="CTA">START SHOPPING</h4></a>
+						</div>
+					</div>
+				</div>
+			</article>
 
-  </body>
+		<!-- <footer>2018 &copy; Movie Reviews. All rights reserved.</footer> -->
+
+		</div>
+
+		<script>
+			var slideIndex = 0;
+			slideshow();
+		</script>
+
+	</body>
 
 </html>

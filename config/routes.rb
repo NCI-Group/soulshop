@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
   resources :profiles
-  devise_for :users
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
   resources :inventories
 
 # Not needed. The proper urls are assigned below and and the bottom
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/cart/:id' => 'cart#add'
 
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
-
+  get '/profile' => 'profiles#signedinuserprofile'
 
 
 

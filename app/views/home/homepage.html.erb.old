@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Home Page</title>
+    <!-- Define the character set to be UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Make the web site work on all devices and screen resolutions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index_style.css">
+    <script src="slideshow.js"></script>
+  </head>
+
+  <body>
+  <div class="container">
+      <header>
+         <a href="#"><img id="logo" src="assets/user.png" alt="logo"></a>
+         <nav>
+           <ul>
+             <li><a href="/inventories" class="navMenu">Shop</a></li>
+             <li><a href="/about" class="navMenu">About</a></li>
+             <li><a href="/contact" class="navMenu">Contact</a></li>
+             <li><a href="/admin" class="navMenu">Login</a></li>
+             <li><a href="/logout" class="navMenu">Logout</a></li>
+             <li id="search">
+               <form id="searchForm">
+                 <input type="text" id="searchBar" name="search" placeholder="Search..">
+                 <button type="submit" id="searchButton">Go</button>
+               </form>
+             </li>
+           </ul>
+         </nav>
+      </header>
+
+      <article>
+
+        <div class="slideshow-container">
+          <a href=""><img class="slides" src="/assets/business.jpg"></a>
+          <a href=""><img class="slides" src="/assets/finance.jpg"></a>
+          <a href=""><img class="slides" src="/assets/old.jpg"></a>
+
+          <div class="slide-text-container">
+            <a href="#">
+              <div class="slide-text">
+                <h3>Amazing text about a soul</h3>
+                <h4>More information and detail about that sould</h4>
+              </div>
+            </a>
+            <a href="#">
+              <div class="slide-text">
+                <h3>Amazing text about a soul</h3>
+                <h4>More information and detail about that sould</h4>
+              </div>
+            </a>
+            <a>
+              <div class="slide-text">
+                <h3>Amazing text about a soul</h3>
+                <h4>More information and detail about that sould</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      <br/>
+
+      </article>
+      <footer>2018 &copy; Soul Shop. All rights reserved.</footer>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      slideshow();
+    </script>
+
+  </body>
+
+</html>

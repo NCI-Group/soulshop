@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Soulshop</title>
-    <%= csrf_meta_tags %>
+	<head>
+		<title>Soulshop</title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-	  <p class="notice"><%= flash[:notice] %></p>
-	  <p class="alert"><%= flash[:alert] %></p>
-    <%= yield %>
-    <% if user_signed_in? %>
-		<div> Signed <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)
-	<% else %>
-		<%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-	<% end %>
-  </body>
+	<body>
+		<div class="container">
+			<header>
+				<a href="#"><img id="logo" src="assets/user.png" alt="logo"></a>
+				<nav>
+					<ul>
+						<li><a href="/inventories" class="navMenu">Shop</a></li>
+						<li><a href="/about" class="navMenu">About</a></li>
+						<li><a href="/contact" class="navMenu">Contact</a></li>
+						<li>
+							<% if user_signed_in? %>
+								<a href='/profile' class="navMenu">Profile</a>
+							<% else %>
+								<a href='/login' class="navMenu">Login</a>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'navMenu' ) %>    
+						</li>
+						<li id="search">
+							<form id="searchForm">
+							<input type="text" id="searchBar" name="search" placeholder="Search..">
+							<button type="submit" id="searchButton">Go</button>
+							</form>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<article>
+				<p class="notice"><%= flash[:notice] %></p>
+				<p class="alert"><%= flash[:alert] %></p>
+				
+				<!-- All views will be 'inserted' here. -->
+				<%= yield %>
+				
+				<% if user_signed_in? %>
+					<div> Signed <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)
+				<% else %>
+					<%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+				<% end %>
+			</article>
+			<footer>2018 &copy; Soul Shop. All rights reserved.</footer>
+		</div>
+	</body>
 </html>
