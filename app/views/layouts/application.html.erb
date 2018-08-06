@@ -3,14 +3,14 @@
 	<head>
 		<title>Soulshop</title>
 		<%= csrf_meta_tags %>
-		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
 
 	<body>
 		<div class="container">
 			<header>
-				<a href="#"><img id="logo" src="assets/user.png" alt="logo"></a>
+				<a href="/"><img id="logo" src="assets/user.png" alt="logo"></a>
 				<nav>
 					<ul>
 						<li><a href="/inventories" class="navMenu">Shop</a></li>
@@ -24,7 +24,7 @@
 							<% end %>
 						</li>
 						<li>
-							<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'navMenu' ) %>    
+							<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'navMenu' ) %>
 						</li>
 						<li id="search">
 							<form id="searchForm">
@@ -38,10 +38,10 @@
 			<article>
 				<p class="notice"><%= flash[:notice] %></p>
 				<p class="alert"><%= flash[:alert] %></p>
-				
+
 				<!-- All views will be 'inserted' here. -->
 				<%= yield %>
-				
+
 				<% if user_signed_in? %>
 					<div> Signed <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)
 				<% else %>

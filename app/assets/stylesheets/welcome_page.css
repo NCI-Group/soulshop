@@ -66,6 +66,8 @@ article {
     margin:auto;
     position: relative;
     text-align: center;
+    border: 1px solid green;
+
 }
 
 .slide-text-container {
