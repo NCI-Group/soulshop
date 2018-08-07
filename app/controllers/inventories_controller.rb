@@ -1,7 +1,7 @@
 class InventoriesController < ApplicationController
   before_action :set_inventory, only: [:show, :edit, :update, :destroy]
 
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
   before_filter :ensure_admin, :only => [:new, :edit, :create, :update, :destroy]
 
   # GET /inventories
