@@ -6,15 +6,14 @@
 
 <% total = 0 %>
 
-<table class="cart">
+<table id="cart">
 	<tr>
-		<td class="legend"></td>
-		<td class="legend">Item</td>
-		<td class="legend">Price</td>
-		<td class="legend">Qty</td>
-		<td class="legend">Total</td>
+		<th class="legend" colspan="2">Product</th>
+		<th class="legend">Price</th>
+		<th class="legend">Qty</th>
+		<th class="legend">Total</th>
 	</tr>
-	
+
 <% @cart.each do |id,quantity| %>
 	<% inventory = Inventory.find_by_id(id) %>
 	<tr>
