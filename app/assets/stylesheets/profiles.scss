@@ -1,3 +1,45 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#profile-container {
+  margin: 5px 150px 5px 150px;
+  padding: 0 20px 0 20px;
+  height: 100%;
+}
+
+#profile-info {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0px 30px 0px;
+}
+
+#profile-container #profile-image {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  vertical-align: top;
+  // border: 1px solid green;
+}
+
+#profile-container #profile-detail {
+  display: inline-block;
+  width: 65%;
+  padding-left: 6px;
+  vertical-align: top;
+  // border: 1px solid blue;
+}
+
+#profile-container #profile-detail h3 {
+  font-size: 22px;
+  color:#005ec3;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.profile-detail-desc {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  width:95%;
+  margin-bottom: 10px;
+}

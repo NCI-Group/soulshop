@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<div id="profile-container">
+
+  <div id="profile-info">
+    <div id="profile-image">
+      <%= image_tag "/assets/user.png" %>
+      <!-- <img id="profile-image" src="assets/user.png" alt="profile_picture"> -->
+      <!-- <a href="/"><img id="logo" src="assets/logo.jpg" alt="logo"></a> -->
+      <%#= image_tag @profile.profile_picture_url %>
+    </div>
+
+    <div id="profile-detail">
+      <div class="profile-detail-desc"><b><%= @profile.firstname %> <%= @profile.lastname %></b></div>
+      <div class="profile-detail-desc"><b>Email: </b><%= @profile.address %></div>
+    </div>
+  </div>
+</div>
+
 <p>
   <strong>Firstname:</strong>
   <%= @profile.firstname %>
