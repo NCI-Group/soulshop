@@ -10,16 +10,16 @@ header {
 }
 
 #logo {
-    display: block;
-    margin: auto;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    width: 50px;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  width: 50px;
 }
 
 nav {
-    width: 85%;
-    margin: auto;
+  width: 85%;
+  margin: auto;
 }
 
 nav ul {
@@ -52,27 +52,27 @@ nav ul li, nav form {
 }
 
 #searchBar {
-    width: 120px;
-    box-sizing: border-box;
-    border: 2px solid #ffffff;
-    border-radius: 4px;
-    font-size: 14px;
-    background-color: rgba(232,232,232,0);
-    background-image: url(asset-path('search4.png'));
-    background-position: 5px;
-    background-repeat: no-repeat;
-    padding: 6px 20px 6px 30px;
-    margin-right: 6px;
-    height: 35px;
-    transition: width 0.4s ease-in-out;
+  width: 120px;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: rgba(232,232,232,0);
+  background-image: url(asset-path('search4.png'));
+  background-position: 5px;
+  background-repeat: no-repeat;
+  padding: 6px 20px 6px 30px;
+  margin-right: 6px;
+  height: 35px;
+  transition: width 0.4s ease-in-out;
 }
 
 #searchBar:focus {
-    width: 80%;
+  width: 80%;
 }
 
 #searchBar::placeholder {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* STYLE SUBMIT BUTTON */
@@ -100,11 +100,11 @@ nav ul li, nav form {
 }
 
 footer {
-    padding: 16px;
-    font-size: 12px;
-    font-family: 'Nunito Sans', sans-serif;
-    color: #d9d9d9;
-    text-align: center;
-    background-color: rgba(20,20,20,0.8);
-    clear: both;
+  padding: 16px;
+  font-size: 12px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #d9d9d9;
+  text-align: center;
+  background-color: rgba(20,20,20,0.8);
+  clear: both;
 }

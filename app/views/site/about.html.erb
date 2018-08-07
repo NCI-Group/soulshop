@@ -1,2 +1,57 @@
-<h1>Site#about</h1>
-<p>Find me in app/views/site/about.html.erb</p>
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Soulshop</title>
+  	<%= csrf_meta_tags %>
+  	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <article>
+
+        <h4>ABOUT US</h4>
+        <div class="presentation">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed enim vitae magna feugiat viverra non non urna. Sed dapibus tincidunt nisl. Etiam quis lacus ut erat luctus ultricies. In varius risus vitae ipsum ornare accumsan. Duis pellentesque est id lacus sodales, vitae consectetur ante blandit. Praesent bibendum gravida rhoncus. Nullam fringilla scelerisque augue, et mattis urna. Duis bibendum odio tortor, id imperdiet purus facilisis in. Pellentesque nec quam ac eros aliquet pharetra.</p>
+        </div>
+
+        <h4>THE TEAM</h4>
+        <div class="founders">
+          <div class="col-left">
+            <img src="/assets/user.png" alt="photo-shareholder">
+            <h4>Anthony</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque erat nisi, eleifend facilisis turpis sollicitudin at.</p>
+            <p><b>Estimated Soul Price:</b> qt. #<p>
+          </div>
+
+          <div class="col-right">
+            <img src="/assets/user.png" alt="photo-shareholder">
+            <h4>Bridget</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque erat nisi, eleifend facilisis turpis sollicitudin at.</p>
+            <p><b>Estimated Soul Price:</b> qt. #<p>
+          </div>
+
+          <div class="col-left">
+            <img src="/assets/user.png" alt="photo-shareholder">
+            <h4>Przemek</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque erat nisi, eleifend facilisis turpis sollicitudin at.</p>
+            <p><b>Estimated Soul Price:</b> qt. #<p>
+          </div>
+
+          <div class="col-right">
+            <img src="/assets/user.png" alt="photo-shareholder">
+            <h4>Stephen</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque erat nisi, eleifend facilisis turpis sollicitudin at.</p>
+            <p><b>Estimated Soul Price:</b> qt. #<p>
+          </div>
+
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

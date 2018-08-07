@@ -1,2 +1,69 @@
-<h1>Site#contact</h1>
-<p>Find me in app/views/site/contact.html.erb</p>
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Soulshop</title>
+  	<%= csrf_meta_tags %>
+  	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <article>
+
+        <h4>CONTACT US</h4>
+        <div class="contact">
+          <p>If any query, please fill out the following form.</p>
+
+          <form action="#">
+
+            <div class="two-col">
+              <div class="col1">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              </div>
+
+              <div class="col2">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              </div>
+
+              <div class="col1">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+              </div>
+
+              <div class="col2">
+                <label for="quote">Would you like to get a quote for your soul?</label>
+                <input type="radio" name="get-quote" value="1" checked> Yes
+                <input type="radio" name="get-not-quote" value="0"> No<br>
+              </div>
+
+              <div class="comment">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message.."></textarea>
+              </div>
+          </div>
+
+          <input type="submit" value="Send">
+
+          </form>
+        </div>
+
+        <h4>FIND US</h4>
+        <p>We are currently located at Mayor Street, North Dock, Dublin 1</p>
+        <p>Come say hello if you're around</p>
+
+        <div id="map">
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHfqM3vvP3IwCtmeFA4sHIvn21WeM0RnM&callback=myMap"></script>
+        </div>
+
+      </article>
+
+    </div>
+  </body>
+</html>

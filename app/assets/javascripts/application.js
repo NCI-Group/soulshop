@@ -35,3 +35,15 @@ function slideshow() {
 
     setTimeout(slideshow, 6000); // Change image every 2 seconds
 }
+
+function myMap() {
+  var coord = {lat: 53.3488224, lng: -6.2437119};
+  var map = new google.maps.Map(document.getElementById('map'),
+    {zoom: 16,
+    center: coord
+    });
+  var marker = new google.maps.Marker({
+    position: coord,
+    map: map
+  });
+}
