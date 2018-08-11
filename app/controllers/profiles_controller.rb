@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
   def new
 	@profile = Profile.new
 	@profile.user_id = current_user.id
-	
+
 	respond_to do |format|
 		format.html # new.html.erb
 		format.json { render json: @profile }
@@ -66,7 +66,7 @@ class ProfilesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
 	def signedinuserprofile
 		profile = Profile.find_by_user_id(current_user.id)
 		if profile.nil?

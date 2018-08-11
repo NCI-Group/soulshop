@@ -5,6 +5,68 @@
 
 
 // STYLE FOR PRODUCT CATALOG
+
+// 1 - Style for Search Bar
+#search {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+  // border: 1px solid red;
+  text-align: center; // to remove
+}
+
+#searchBar {
+  width: 90%;
+  box-sizing: border-box;
+  border: 2px solid #a4a4a4;
+  border-radius: 4px;
+  font-size: 18px;
+  background-color: rgba(169,169,169,0.2);
+  background-image: url(asset-path('search.png'));
+  background-position: 5px;
+  background-repeat: no-repeat;
+  padding: 6px 20px 6px 30px;
+  margin-right: 6px;
+  height: 35px;
+  // transition: width 0.4s ease-in-out;
+}
+
+#searchBar:focus {
+  outline-color: #ff8000;
+  outline-width: medium;
+}
+
+#searchBar::placeholder {
+  color: #8a8a8a;
+}
+
+/* STYLE SUBMIT BUTTON */
+#searchButton {
+  display: inline-block;
+  width: 80px;
+  height: 35px;
+  padding: 5px;
+  background: #2196F3;
+  color: white;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background: #0b7dda;
+}
+
+#searchButton::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+// 2 - Style for Product List
 .catalog {
   width: 80%;
   margin: auto;
@@ -12,10 +74,12 @@
 
 .catalog td {
   border-bottom: 1px solid #dddddd;
+  padding: 10px;
 }
 
 .catalog .image-style {
   width: 200px;
+  border: 1px solid #a9a9a9
 }
 
 .catalog .title {
@@ -56,6 +120,7 @@
 .catalog .cart-image {
   width: 16%;
 }
+
 
 // STYLE FOR INDIVIDUAL PRODUCT PAGE
 .back-to-catalog {
