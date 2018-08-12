@@ -16,7 +16,8 @@
 						<li><a href="/inventories" class="navMenu">Shop</a></li>
 						<li><a href="/about" class="navMenu">About</a></li>
 						<li><a href="/contact" class="navMenu">Contact</a></li>
-						<li id="li-profile">
+						
+						<!-- <li id="li-profile">
 							<% if user_signed_in? %>
 								<a href='/profile' class="navMenu">Profile (<%= current_user.email %>)</a>
 							<% else %>
@@ -25,7 +26,23 @@
 						</li>
 						<li>
 							<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'navMenu' ) %>
-						</li>
+						</li> -->
+
+						<% if user_signed_in? %>
+							<li id="li-profile">
+								<a href='/profile' class="navMenu">Profile (<%= current_user.email %>)</a>
+							</li>
+							<li>
+								<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'navMenu' ) %>
+							</li>
+						<% else %>
+							<li>
+								<%= link_to 'Register', new_user_registration_path %>
+							</li>
+							<li>
+								<%= link_to 'Sign in', new_user_session_path %>
+							</li>
+						<% end %>
 					</ul>
 				</nav>
 			</header>
