@@ -4,16 +4,16 @@
 
 
 // Style for Sign up Form
-#container-sign-up-form {
-  width: 30%;
+#container-sign-up-form, #container-log-in-form, #container-forgot-password-form {
+  width: 28%;
   margin: auto;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 8px;
 }
 
-#sign-up-form {
+#sign-up-form, #log-in-form, #forgot-password-form {
   width: 70%;
   font-size: 18px;
   margin: auto;
@@ -26,7 +26,7 @@
   padding: 8px 10px;
 }
 
-.create-account-button {
+.create-account-button, .log-in-button, .forgot-password-button {
   width: 98%;
   background-color: #82bbd1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff9999));
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.create-account-button:hover {
+.create-account-button:hover, .log-in-button:hover {
   background-color: #82bbd1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff6600));
 }
@@ -46,12 +46,18 @@
   margin-bottom: 10px;
 }
 
-.log-in-link {
-    font-size: 12px;
+.alternative-links {
+    font-size: 14px;
     text-decoration: underline;
     font-style: italic;
     text-align: center;
 }
+
+.check-box, .remember_label {
+  display: inline-block;
+}
+
+
 
 // .two-col {
 //   width: 80%;
