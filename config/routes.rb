@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'
   get '/cart/remove/:id' => 'cart#remove'
+  get '/cart/checkout' => 'cart#checkout'
 
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   get '/profile' => 'profiles#signedinuserprofile'

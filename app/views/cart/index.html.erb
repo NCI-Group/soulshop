@@ -13,6 +13,8 @@
 		<article>
 
 			<h1>Your Cart</h1>
+			
+			<p class="notice"><%= flash[:notice] %></p>
 
 			<% if @cart.empty? %>
 				<p>Your Cart is empty.</p>
@@ -30,6 +32,9 @@
 
 			<% @cart.each do |id,quantity| %>
 				<% inventory = Inventory.find_by_id(id) %>
+				<% if inventory.nil? %>
+					<% next %>
+				<% end %>
 				<tr>
 					<td>
 						<div class="image">
@@ -52,6 +57,11 @@
 					<td>
 						<div class="price"><%= number_to_currency(total, :unit => "Qrts") %></div>
 					</td>
+					
+					<td>
+						<%= link_to "Checkout", controller: "cart", action: "checkout" %>
+					</td>
+					
 				</tr>
 			</table>
 
