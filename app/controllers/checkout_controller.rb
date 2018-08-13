@@ -17,8 +17,12 @@ class CheckoutController < ApplicationController
 		end
 		
 		session[:cart] = nil
-		flash[:notice] = "Thank you for your purchase of #{totalSouls} souls for #{totalCost} quarts of blood!"
 		
+		if totalSouls == 0 then
+			flash[:notice] = "Cannot check out with nothing in cart."
+		else
+			flash[:notice] = "Thank you for your purchase of #{totalSouls} souls for #{totalCost} quarts of blood!"
+		end
 	else
 		# Nothing in the cart, cannot complete purchase
 		flash[:notice] = "Cannot check out with nothing in cart."
