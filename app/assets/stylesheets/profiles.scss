@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// Style for Sign up Form
+// Style for Sign up and Log in Forms
 #container-sign-up-form, #container-log-in-form, #container-forgot-password-form {
   width: 28%;
   margin: auto;
@@ -58,28 +58,6 @@
 }
 
 
-
-// .two-col {
-//   width: 80%;
-//   height: 100%;
-//   border: 1px solid yellow;
-// }
-//
-// .two-col .col1, .two-col .col2 {
-//     width: 40%;
-//     margin: 20px;
-//     border: 1px solid green;
-// }
-//
-// .two-col .col1 {
-//     float: left;
-// }
-//
-// .two-col .col2 {
-//     float: right;
-// }
-
-
 // Style for User Profile Page
 #profile-container {
   margin: 5px 150px 5px 150px;
@@ -97,7 +75,8 @@
   width: 30%;
   text-align: center;
   vertical-align: top;
-  // border: 1px solid green;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
 }
 
 #profile-container #profile-detail {
@@ -117,8 +96,42 @@
 }
 
 .profile-detail-desc {
-  padding-bottom: 10px;
+  padding: 10px;
+  // border: 1px solid red;
   border-bottom: 1px solid #dddddd;
   width:95%;
   margin-bottom: 10px;
+}
+
+.profile-detail-desc span {
+  float: right;
+}
+
+// Style for transaction history
+#transaction-history {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#transaction-history td, #transaction-history th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#transaction-history tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#transaction-history tr:hover {
+  background-color: #ddd;
+}
+
+#transaction-history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
 }

@@ -1,9 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-  
+
   before_filter :ensure_admin, :only => [:index, :create, :destroy]
   before_filter :valid_id, :only => [:show, :edit, :update]
-  
+
 
 
   # GET /profiles
@@ -15,6 +15,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @user = current_user
   end
 
   # GET /profiles/new
@@ -81,18 +82,18 @@ class ProfilesController < ApplicationController
 			redirect_to "/profiles/#{@profile.id}"
 		end
 	end
-	
+
 	def ensure_admin
 		unless current_user && current_user.admin?
 			render :text => "Access Error Message", :status => :unauthorized
 		end
 	end
-	
+
 	def valid_id
 		if current_user.nil?
 			render :text => "Cannot access profile while not signed in.", :status => :unauthorized
 		end
-		
+
 		if current_user.id.to_s != params[:id].to_s
 			render :text => "Unable to access other users profiles.", :status => :unauthorized
 		end
