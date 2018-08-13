@@ -16,18 +16,6 @@
 						<li><a href="/inventories" class="navMenu">Shop</a></li>
 						<li><a href="/about" class="navMenu">About</a></li>
 						<li><a href="/contact" class="navMenu">Contact</a></li>
-
-						<!-- <li id="li-profile">
-							<% if user_signed_in? %>
-								<a href='/profile' class="navMenu">Profile (<%= current_user.email %>)</a>
-							<% else %>
-								<a href='/login' class="navMenu">Login</a>
-							<% end %>
-						</li>
-						<li>
-							<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'navMenu' ) %>
-						</li> -->
-
 						<% if user_signed_in? %>
 							<li id="li-profile">
 								<a href='/profile' class="navMenu">Profile (<%= current_user.email %>)</a>
@@ -46,13 +34,9 @@
 					</ul>
 				</nav>
 			</header>
-			<article>
 				<p class="notice"><%= flash[:notice] %></p>
 				<p class="alert"><%= flash[:alert] %></p>
-
-				<!-- All views will be 'inserted' here. -->
 				<%= yield %>
-
 				<!-- Remove this one once nav updated -->
 				<% if false %> <!-- Hacky way of removing following code -->
 					<% if user_signed_in? %>
@@ -61,7 +45,6 @@
 						<%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
 					<% end %>
 				<% end %>
-			</article>
 			<footer>2018 &copy; Sould. All rights reserved.</footer>
 		</div>
 	</body>

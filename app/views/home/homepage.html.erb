@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Soulshop</title>
-	<%= csrf_meta_tags %>
-	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+	<head>
+		<title>Soulshop</title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
 
-<body class="homepage">
-	<div class="container">
-
-		<article>
+	<body>
+		<div class="container">
 			<div class="slideshow-container">
 				<a href="/inventories/1"><img class="slides" src="/assets/backtoschool.jpg"></a>
 				<a href="/inventories/2"><img class="slides" src="/assets/testimonials.jpg"></a>
@@ -18,8 +16,8 @@
 
 				<div class="slide-text-container">
 					<a href="/inventories/1" class="slide-text">
-							<h3>Amazing text about a soul</h3>
-							<h4>More information and detail about that sould</h4>
+						<h3>Amazing text about a soul</h3>
+						<h4>More information and detail about that sould</h4>
 					</a>
 					<a href="/inventories/2" class="slide-text">
 						<h3>Amazing text about a soul</h3>
@@ -32,18 +30,11 @@
 				</div>
 
 			</div>
-
-			<br/>
-
-		</article>
-
-	</div>
-
-	<script>
-	var slideIndex = 0;
-	slideshow();
-	</script>
-
-</body>
-
+		</div>
+		<br/>
+		<script>
+		var slideIndex = 0;
+		slideshow();
+		</script>
+	</body>
 </html>
