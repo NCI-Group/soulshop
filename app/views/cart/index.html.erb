@@ -37,9 +37,10 @@
 						</div>
 					</td>
 					<td class="title"><%= link_to inventory.Designation, inventory %></td>
-					<td class="price"><%= number_to_currency(inventory.Cost) %></td>
+					<td class="price">Qrts<%= inventory.Cost %></td>
 					<td class="quantity"><%= quantity %><br/></td>
-					<td class="price"><%= number_to_currency(quantity * inventory.Cost, :unity => "Qrts") %></td>
+					<td class="price"><%= number_to_currency(quantity * inventory.Cost, :unit => "Qrts") %></td>
+					<td> <a href="/cart/remove/<%= id =%>">Remove</a> </td>
 				</tr>
 				<% total += quantity * inventory.Cost %>
 			<% end %>
