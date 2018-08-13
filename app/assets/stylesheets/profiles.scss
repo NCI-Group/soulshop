@@ -2,6 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// Style for Sign up Form
+// #log-in-form {
+//   width: 40%;
+//   margin: auto;
+//   border: 1px solid blue;
+// }
+
+#container-sign-up-form {
+  width: 80%;
+  margin: auto;
+  border: 1px solid blue;
+}
+
+#sign-up-form {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid red;
+}
+
+.two-col {
+  width: 80%;
+  height: 100%;
+  border: 1px solid yellow;
+}
+
+.two-col .col1, .two-col .col2 {
+    width: 40%;
+    margin: 20px;
+    border: 1px solid green;
+}
+
+.two-col .col1 {
+    float: left;
+}
+
+.two-col .col2 {
+    float: right;
+}
+
+
+// Style for User Profile Page
 #profile-container {
   margin: 5px 150px 5px 150px;
   padding: 0 20px 0 20px;
