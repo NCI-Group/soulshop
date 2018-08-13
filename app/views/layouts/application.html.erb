@@ -54,10 +54,12 @@
 				<%= yield %>
 
 				<!-- Remove this one once nav updated -->
-				<% if user_signed_in? %>
-					<div> Signed as <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)
-				<% else %>
-					<%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+				<% if false %> <!-- Hacky way of removing following code -->
+					<% if user_signed_in? %>
+						<div> Signed as <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)
+					<% else %>
+						<%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+					<% end %>
 				<% end %>
 			</article>
 			<footer>2018 &copy; Sould. All rights reserved.</footer>
