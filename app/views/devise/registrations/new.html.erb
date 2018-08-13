@@ -1,6 +1,6 @@
-<h2>Sign up</h2>
-
-  <div id="log-in-form" >
+<div id="container-sign-up-form">
+  <h3>Create account</h3>
+  <div id="sign-up-form" >
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
@@ -10,9 +10,8 @@
       </div>
 
       <div class="field">
-        <%= f.label :password%>
-        <%if @minimum_password_length %>(<%= @minimum_password_length %> characters minimum)
-        <% end %><br/>
+        <%= f.label :password%><%- if @minimum_password_length %>(<%= @minimum_password_length %> characters minimum)<% end %>
+          </br>
         <%= f.password_field :password, autocomplete: "off", class: "password-field", placeholder: "Enter your password.."%>
       </div>
 
@@ -22,10 +21,14 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Create your Sould account", class:"create-account-button" %>
+      </div>
+
+      <div class="terms-and-conditions">
+        By creating an account you agree to Sould's Conditions of Use & Sale. Important note, all sales are final. Souls are non refundable.
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links"%>
   </div>
 </div>

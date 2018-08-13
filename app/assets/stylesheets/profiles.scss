@@ -4,43 +4,74 @@
 
 
 // Style for Sign up Form
-// #log-in-form {
-//   width: 40%;
-//   margin: auto;
-//   border: 1px solid blue;
-// }
-
 #container-sign-up-form {
-  width: 80%;
+  width: 30%;
   margin: auto;
-  border: 1px solid blue;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
 }
 
 #sign-up-form {
-  width: 80%;
-  margin: 10px auto;
-  border: 1px solid red;
+  width: 70%;
+  font-size: 18px;
+  margin: auto;
+  padding: 5px;
 }
 
-.two-col {
-  width: 80%;
-  height: 100%;
-  border: 1px solid yellow;
+.text-field, .password-field {
+  width: 90%;
+  font-size: 12px;
+  padding: 8px 10px;
 }
 
-.two-col .col1, .two-col .col2 {
-    width: 40%;
-    margin: 20px;
-    border: 1px solid green;
+.create-account-button {
+  width: 98%;
+  background-color: #82bbd1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff9999));
+  padding: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.two-col .col1 {
-    float: left;
+.create-account-button:hover {
+  background-color: #82bbd1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff6600));
 }
 
-.two-col .col2 {
-    float: right;
+.terms-and-conditions {
+  font-size: 10px;
+  margin-bottom: 10px;
 }
+
+.log-in-link {
+    font-size: 12px;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+}
+
+// .two-col {
+//   width: 80%;
+//   height: 100%;
+//   border: 1px solid yellow;
+// }
+//
+// .two-col .col1, .two-col .col2 {
+//     width: 40%;
+//     margin: 20px;
+//     border: 1px solid green;
+// }
+//
+// .two-col .col1 {
+//     float: left;
+// }
+//
+// .two-col .col2 {
+//     float: right;
+// }
 
 
 // Style for User Profile Page
