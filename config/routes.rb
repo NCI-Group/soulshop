@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   resources :profiles
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
   resources :inventories
@@ -18,7 +16,8 @@ Rails.application.routes.draw do
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'
   get '/cart/remove/:id' => 'cart#remove'
-  get '/cart/checkout' => 'cart#checkout'
+  
+  get '/checkout' => 'checkout#checkout'
 
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   get '/profile' => 'profiles#signedinuserprofile'
