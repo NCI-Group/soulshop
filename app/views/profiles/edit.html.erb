@@ -1,6 +1,9 @@
-<h1>Editing Profile</h1>
+<div id="container-edit-profile-form">
+  <h3>Edit your profile</h3>
 
-<%= render 'form', profile: @profile %>
+  <%= render 'form', profile: @profile %>
 
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+  <div class="alternative-links">
+    <%= link_to 'Return to your profile', @profile %>
+  </div>
+</div>

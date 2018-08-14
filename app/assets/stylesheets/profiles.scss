@@ -4,8 +4,8 @@
 
 
 // Style for Sign up and Log in Forms
-#container-sign-up-form, #container-log-in-form, #container-forgot-password-form {
-  width: 28%;
+#container-sign-up-form, #container-log-in-form, #container-forgot-password-form, #container-edit-profile-form {
+  width: 30%;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -13,21 +13,28 @@
   border-radius: 8px;
 }
 
-#sign-up-form, #log-in-form, #forgot-password-form {
-  width: 70%;
+#sign-up-form, #log-in-form, #forgot-password-form, #edit-profile-form {
+  width: 60%;
   font-size: 18px;
   margin: auto;
-  padding: 5px;
+  padding: 10px;
+  // border: 1px solid red;
 }
 
 .text-field, .password-field {
-  width: 90%;
+  width: 96%;
   font-size: 12px;
-  padding: 8px 10px;
+  padding: 10px 5px;
 }
 
-.create-account-button, .log-in-button, .forgot-password-button {
-  width: 98%;
+#edit-profile-form .text-field, #edit-profile-form .password-field {
+  width: 96%;
+  font-size: 12px;
+  padding: 10px 5px;
+}
+
+.create-account-button, .log-in-button, .forgot-password-button, .edit-profile-button {
+  width: 100%;
   background-color: #82bbd1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff9999));
   padding: 8px 0;
@@ -36,7 +43,7 @@
   cursor: pointer;
 }
 
-.create-account-button:hover, .log-in-button:hover {
+.create-account-button:hover, .log-in-button:hover, .forgot-password-button:hover, .edit-profile-button:hover {
   background-color: #82bbd1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff6600));
 }

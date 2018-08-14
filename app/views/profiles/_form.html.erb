@@ -1,4 +1,5 @@
-<%= form_for(profile) do |f| %>
+<div id="edit-profile-form" >
+  <%= form_for(profile) do |f| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -13,25 +14,21 @@
 
   <div class="field">
     <%= f.label :firstname %>
-    <%= f.text_field :firstname %>
+    <%= f.text_field :firstname, class: "text-field"%>
   </div>
 
   <div class="field">
     <%= f.label :lastname %>
-    <%= f.text_field :lastname %>
+    <%= f.text_field :lastname, class: "text-field"%>
   </div>
 
   <div class="field">
     <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%= f.text_field :address, class: "text-field"%>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save changes", class:"edit-profile-button" %>
   </div>
-<% end %>
+  <% end %>
+</div>
