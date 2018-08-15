@@ -105,38 +105,9 @@
 
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Designation:</strong>
-    <%= @inventory.Designation %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @inventory.Description %>
-  </p>
-
-  <p>
-    <strong>Freshness:</strong>
-    <%= @inventory.Freshness %>
-  </p>
-
-  <p>
-    <strong>Image url:</strong>
-    <%= @inventory.image_url %>
-  </p>
-
-  <p>
-    <strong>Karma rating:</strong>
-    <%= @inventory.Karma_Rating %>
-  </p>
-
-  <p>
-    <strong>Cost:</strong>
-    <%= @inventory.Cost %>
-  </p>
-
-  <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
-  <%= link_to 'Back', inventories_path %>
+  <% if current_user && current_user.admin? %>
+	<%= link_to 'Edit', edit_inventory_path(@inventory) %>
+  <% end %>
 
 </body>
 
