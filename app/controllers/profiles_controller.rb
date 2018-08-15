@@ -1,8 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
-  before_filter :ensure_admin, :only => [:index, :create, :destroy]
-  before_filter :valid_id, :only => [:show, :edit, :update]
+  before_filter :ensure_admin, :only => [:index, :create]
+  before_filter :valid_id, :only => [:show, :edit, :update, :delete]
 
 
 
