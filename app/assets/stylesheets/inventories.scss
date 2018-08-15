@@ -123,15 +123,25 @@
 
 
 // STYLE FOR INDIVIDUAL PRODUCT PAGE
+#back-catalog-div{
+  width:75%;
+  margin: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
 .back-to-catalog {
+  margin-left: 20px;
   font-style: italic;
   text-decoration: underline;
 }
 
 #product-container {
-  margin: 5px 150px 5px 150px;
-  padding: 0 20px 0 20px;
+  width:75%;
   height: 100%;
+  margin: auto;
+  // margin: 5px 150px 5px 150px;
+  padding: 10px 20px 10px 20px;
 }
 
 #product-info {
