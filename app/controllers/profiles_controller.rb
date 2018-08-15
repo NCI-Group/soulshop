@@ -95,7 +95,9 @@ class ProfilesController < ApplicationController
 		end
 
 		if current_user.id.to_s != params[:id].to_s
-			render :text => "Unable to access other users profiles.", :status => :unauthorized
+			if !current_user.admin?
+				render :text => "Unable to access other users profiles.", :status => :unauthorized
+			end
 		end
 	end
 
