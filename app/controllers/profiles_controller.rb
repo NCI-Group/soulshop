@@ -1,8 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
-  before_filter :ensure_admin, :only => [:index, :create, :destroy]
-  before_filter :valid_id, :only => [:show, :edit, :update]
+  before_filter :ensure_admin, :only => [:index, :create]
+  before_filter :valid_id, :only => [:show, :edit, :update, :delete]
 
 
 
@@ -103,6 +103,7 @@ class ProfilesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
       @profile = Profile.find(params[:id])
+      @purchases = Purchase.where(user_id: current_user.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
