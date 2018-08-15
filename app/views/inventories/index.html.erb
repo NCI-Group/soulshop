@@ -43,6 +43,10 @@
         <% end %>
       </div>
     </td>
+    <% if current_user && current_user.admin? %>
+		<td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
+		<td><%= link_to 'Destroy',  { action: :destroy, id: inventory.id }, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 

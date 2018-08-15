@@ -107,6 +107,7 @@
 
   <% if current_user && current_user.admin? %>
 	<%= link_to 'Edit', edit_inventory_path(@inventory) %>
+	<%= link_to 'Destroy',  { action: :destroy, id: @inventory.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 
 </body>
