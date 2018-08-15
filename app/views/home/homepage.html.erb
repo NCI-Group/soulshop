@@ -11,8 +11,8 @@
 		<div class="container">
 			<div class="slideshow-container">
 				<a href="/inventories/1"><img class="slides" src="/assets/backtoschool.jpg"></a>
-				<a href="/inventories/2"><img class="slides" src="/assets/testimonials.jpg"></a>
-				<a href="/inventories/3"><img class="slides" src="/assets/wequote.jpg"></a>
+				<a href="/about"><img class="slides" src="/assets/testimonials.jpg"></a>
+				<a href="/contact"><img class="slides" src="/assets/wequote.jpg"></a>
 
 				<div class="slide-text-container">
 					<a href="/inventories/4" class="slide-text">
@@ -30,6 +30,44 @@
 				</div>
 
 			</div>
+
+			<% if current_user && !@prevPurchase.nil? %>
+				<div style="width:90%; margin:auto; border-bottom:1px solid #ddd">
+					<h3>Your latest purchases</h3>
+				</div>
+				<% prev_purchase_id ||= [] %>
+				<% prev_purchase = JSON.parse(@prevPurchase.contents) %>
+				<% prev_purchase["purchase"].each do |json| %>
+					<% prev_purchase_id << json["id"] %>
+				<% end %>
+				<% @allProducts.size() %>
+				<% prev_purchased_products ||= [] %>
+				<% prev_purchase_id.each_with_index do |item, index| %>
+					<% prev_purchased_products << @allProducts[item] %>
+				<% end %>
+			<% prev_purchased_products.inspect() %>
+
+			</br>
+
+			<div style="padding:10px">
+			<% prev_purchased_products.each do |purchase| %>
+			<div id="last-purchases">
+			  <div class="last-purchased-products">
+			    <a href="/profile">
+			      <%= image_tag(purchase.image_url, :alt => "Last Purchases", :class => "image-last-purchase") %>
+			    </a>
+			    <div class="info-rec-p">
+			      <span class="info-rec-name-p"><%= purchase.Designation %></span></br>
+			      <span class="info-rec-karma-p">Karma Rating: <%= purchase.Karma_Rating %></span></br>
+			      <span class="info-rec-price-p">qt. <%= purchase.Cost %></span>
+			    </div>
+			  </div>
+			</div>
+			<% end %>
+		</div>
+			<% end %>
+
+
 		</div>
 		<br/>
 		<script>

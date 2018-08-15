@@ -8,6 +8,8 @@
 
 
 /* STYLE HOME PAGE */
+
+// Slideshow
 .container {
   width: 100%;
   height: 100%;
@@ -18,7 +20,7 @@
     margin:auto;
     position: relative;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .slides {
@@ -43,4 +45,46 @@
 .slide-text-container a {
   text-decoration: none;
   color: #e2e2e2;
+}
+
+// Latest purchases
+#last-purchases {
+  display: inline;
+  width: calc(90%/5);
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  margin-bottom: 30px;
+  float:left;
+}
+
+.last-purchased-products {
+    border: 1px solid #ccc;
+    margin: 0 12px 0 12px;
+    padding: 5px;
+}
+
+.last-purchased-products:hover {
+    border: 1px solid #777;
+}
+
+.last-purchased-products .image-last-purchase {
+    width: 90%;
+    height: auto;
+}
+
+.info-rec-p {
+  font-weight: bold;
+}
+
+.info-rec-name-p {
+  color:#005ec3;
+}
+
+.info-rec-karma-p {
+  color: #ff8000;
+}
+
+.info-rec-price-p {
+  color: #bf0000
 }
