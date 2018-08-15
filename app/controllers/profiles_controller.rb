@@ -17,6 +17,7 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user #User.find(params[:id])
     #current_user
+    @allProducts = Inventory.all
   end
 
   # GET /profiles/new

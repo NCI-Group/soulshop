@@ -12,38 +12,38 @@
     </div>
   </div>
 
+  <h3>History of your transactions</h3>
   <div id="transaction-container">
-    <h3>History of your transactions</h3>
     <table id="transaction-history">
 		<tr>
-			<th>Product</th>
-			<th>Price</th>
-			<th>Date</th>
+      <th>Product</th>
+			<th>Unit Price</th>
+			<th>Quantity</th>
+      <th>Purchase Time</th>
 		</tr>
-		
-	<% @purchases.each do |purchase| %>
-		<% pj = JSON.parse(purchase.contents) %>
-		<% pj["purchase"].each do |json| %>
-			<% quantity = json["quantity"] %>
-			<tr>
-				<td>
-					<%= quantity %> * <%= json["id"] %> <!-- get link to product as well as displaying product designation -->
-				</td>
-				<td>
-					<!-- price = quantity * value of inventory[id] -->
-				</td>
-				<td>
-					<%= purchase.created_at %>
-				</td>
-			</tr>
-		<% end %>
-	<% end %>
-		
-	</table>
+
+  	<% @purchases.each do |purchase| %>
+      <% prev_purchase = JSON.parse(purchase.contents) %>
+      <% prev_purchase.inspect() %>
+
+      <% prev_purchase["purchase"].each do |json| %>
+        <% prev_purchased_id = json["id"] %>
+        <% quantity = json["quantity"] %>
+        <% prev_purchased_product = @allProducts[prev_purchased_id] %>
+        <tr>
+          <td><%= prev_purchased_product.Designation %></td>
+          <td><%= prev_purchased_product.Cost %></td>
+          <td><%= quantity %></td>
+          <td><%= purchase.created_at %></td>
+        </tr>
+      <% end %>
+    <% end %>
+
+	 </table>
   </div>
-  
+
   <% if current_user && current_user.admin? %>
-	<%= link_to 'Edit', edit_profile_path(@profile) %>
+	 <%= link_to 'Edit', edit_profile_path(@profile) %>
   <% end %>
-  
+
 </div>

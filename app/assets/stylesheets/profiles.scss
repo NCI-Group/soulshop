@@ -115,30 +115,38 @@
 }
 
 // Style for transaction history
-#transaction-history {
-    border-collapse: collapse;
+#transaction-container {
     width: 80%;
+    height:160%;
     margin: auto;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow: auto;
+}
+
+#transaction-history {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 #transaction-history td, #transaction-history th {
     border: 1px solid #ddd;
     padding: 8px;
+    font-size: 14px;
+    text-align: center;
 }
 
-#transaction-history tr:nth-child(even){
-  background-color: #f2f2f2;
-}
+#transaction-history tr:nth-child(even){background-color: #f2f2f2;}
 
-#transaction-history tr:hover {
-  background-color: #ddd;
-}
+#transaction-history tr:hover {background-color: #ddd;}
 
 #transaction-history th {
+    font-size: 14px;
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+    // background-color: #4CAF50;
+    background-color: #2393c5;
+    color: #f9f9f9;
 }

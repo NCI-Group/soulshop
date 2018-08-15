@@ -38,11 +38,13 @@
 				<% prev_purchase_id ||= [] %>
 				<% prev_purchase = JSON.parse(@prevPurchase.contents) %>
 				<% prev_purchase["purchase"].each do |json| %>
+					<!-- Store all product ids from the previous transaction -->
 					<% prev_purchase_id << json["id"] %>
 				<% end %>
 				<% @allProducts.size() %>
 				<% prev_purchased_products ||= [] %>
 				<% prev_purchase_id.each_with_index do |item, index| %>
+					<!-- Get all the products purchased -->
 					<% prev_purchased_products << @allProducts[item] %>
 				<% end %>
 			<% prev_purchased_products.inspect() %>
@@ -65,7 +67,7 @@
 			</div>
 			<% end %>
 		</div>
-			<% end %>
+		<% end %>
 
 
 		</div>
