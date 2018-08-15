@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
-  before_filter :ensure_admin, :only => [:index, :create]
+  before_filter :ensure_admin, :only => [:index]
   before_filter :valid_id, :only => [:show, :edit, :update, :destroy]
 
 
@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    @user = User.find(params[:id])
+    @user = current_user #User.find(params[:id])
     #current_user
   end
 
