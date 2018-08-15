@@ -2,25 +2,80 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#cart-container {
+  width: 80%;
+  height:160%;
+  margin: auto;
+  padding: 10px;
+  // border: 1px solid red;
+  overflow: auto;
+}
+
 #cart {
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 #cart td, #cart th {
     border: 1px solid #ddd;
     padding: 8px;
+    font-size: 14px;
+    text-align: center;
 }
 
 #cart tr:nth-child(even){background-color: #f2f2f2;}
 
+#cart tr:last-child {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
 #cart tr:hover {background-color: #ddd;}
 
 #cart th {
+    font-size: 14px;
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+    // background-color: #4CAF50;
+    background-color: #2393c5;
+    color: #f9f9f9;
+}
+
+.remove-cart-image {
+  width: 12%;
+  text-align: center;
+}
+
+.remove-button {
+  display: block;
+  width: 200px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #82bbd1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff9999));
+  padding: 12px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.remove-button span {
+  color: #1b1b1b;
+}
+
+.remove-button:hover {
+  background-color: #82bbd1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff6600));
+}
+
+.continue-shopping {
+  font-size: 8px;
+  display: block;
+  float: right;
+  clear: both;
 }
