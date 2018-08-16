@@ -22,10 +22,6 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-	if !Profile.find_by_user_id(current_user.id).nil?
-		edirect_to "/profiles/#{current_user.id}"
-	end
-  
 	@profile = Profile.new
 	@profile.user_id = current_user.id
 
