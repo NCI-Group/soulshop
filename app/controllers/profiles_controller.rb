@@ -22,6 +22,10 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
+	if !Profile.find_by_user_id(current_user.id).nil?
+		edirect_to "/profiles/#{current_user.id}"
+	end
+  
 	@profile = Profile.new
 	@profile.user_id = current_user.id
 
@@ -76,13 +80,21 @@ class ProfilesController < ApplicationController
   end
 
 	def signedinuserprofile
-		profile = Profile.find_by_user_id(current_user.id)
-		if profile.nil?
+		begin
+			profile = Profile.find(current_user.id)
+		rescue ActiveRecord::RecordNotFound
 			redirect_to "/profiles/new"
 		else
-			@profile = Profile.find_by_user_id(current_user.id)
-			redirect_to "/profiles/#{@profile.id}"
+			@profile = profile
+			redirect_to "/profiles/#{profile.id}"
 		end
+		#profile = Profile.find_by_user_id(current_user.id)
+		#if profile.nil?
+		#	redirect_to "/profiles/new"
+		#else
+		#	@profile = profile
+		#	redirect_to "/profiles/#{@profile.id}"
+		#end
 	end
 
 	def ensure_admin

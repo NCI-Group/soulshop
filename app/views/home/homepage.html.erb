@@ -53,6 +53,7 @@
 
 			<div style="padding:10px">
 			<% prev_purchased_products.each do |purchase| %>
+			<% next if purchase.nil? %>
 			<div id="last-purchases">
 			  <div class="last-purchased-products">
 			    <a href="/profile">
